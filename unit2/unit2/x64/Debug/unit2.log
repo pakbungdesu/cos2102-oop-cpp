@@ -1,0 +1,3 @@
+﻿  unit2.cpp
+C:\Users\User\source\repos\oop-cpp-collection\unit2\unit2.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  unit2.vcxproj -> C:\Users\User\source\repos\oop-cpp-collection\unit2\x64\Debug\unit2.exe
