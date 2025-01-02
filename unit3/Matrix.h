@@ -3,7 +3,14 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+<<<<<<< HEAD
 using namespace std;
+=======
+#include "MyRect.h"
+#include "Stack.h"
+using namespace std;
+// #include "Queue.h"
+>>>>>>> df358046843fe49277b9a1515ed0786daa83b32d
 
 class Matrix {
 private:

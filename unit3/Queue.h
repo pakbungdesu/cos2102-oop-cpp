@@ -75,7 +75,11 @@ public:
     int remove() {
         if (!isQueueEmpty()) {
             // shrink array
+<<<<<<< HEAD
             if (this->count - 1 <= this->len / 4) {
+=======
+            if (this->count <= this->len / 4) {
+>>>>>>> df358046843fe49277b9a1515ed0786daa83b32d
                 resize(this->len / 2);
             }
             int res = this->arr[0];
