@@ -1,8 +1,8 @@
 
 #include <iostream>
 #include "Date.h"
-#include "Point.h";
-#include "Rectangle.h"
+#include "../unit2/Point.h";
+#include "../unit2/Rectangle.h"
 using namespace std;
 
 int main()

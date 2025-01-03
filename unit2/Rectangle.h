@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 class Rectangle {
 private:
     static int num;
