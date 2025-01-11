@@ -72,25 +72,6 @@ public:
         }
     }
 
-    int remove() {
-        if (!isQueueEmpty()) {
-            // shrink array
-<<<<<<< HEAD
-            if (this->count - 1 <= this->len / 4) {
-=======
-            if (this->count <= this->len / 4) {
->>>>>>> df358046843fe49277b9a1515ed0786daa83b32d
-                resize(this->len / 2);
-            }
-            int res = this->arr[0];
-            this->count--;
-            shiftLeft();
-            return res;
-        }
-        return -9999; // no more items to return
-    }
-
-
     void shiftLeft() {
         int i;
         for (i = 0; i < this->count; i++) {
@@ -106,6 +87,22 @@ public:
 
     bool isQueueEmpty() {
         return this->count == 0;
+    }
+
+    int remove() {
+        if (!isQueueEmpty()) {
+
+            if (this->count - 1 <= this->len / 4) {
+                if (this->count <= this->len / 4) {
+                    resize(this->len / 2);
+                }
+                int res = this->arr[0];
+                this->count--;
+                shiftLeft();
+                return res;
+            }
+            return -9999; // no more items to return
+        }
     }
 
     int countQueueItem() {
