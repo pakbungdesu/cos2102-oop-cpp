@@ -12,7 +12,6 @@ using namespace std;
 
 int main()
 {
-
     int choice;
 
     do {
@@ -20,11 +19,10 @@ int main()
         cin >> choice;
     } while (choice < 1 || choice > 5);
 
-
     void (*pf[])() = { testStack, testQueue, testMatrix, testMyRect, testPascal};
     pf[choice - 1]();
+
     return 0;
-    
 }
 
 

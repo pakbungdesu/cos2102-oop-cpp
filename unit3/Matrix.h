@@ -23,22 +23,13 @@ private:
     void allocMatrix(int new_n) {
         deleteMatrix(); // delete the old
 
-        // allocate the new
+        // allocate the new one
         this->arr = new int* [new_n];
+
         for (int i = 0; i < new_n; i++) {
             arr[i] = new int[new_n];
         }
     }
-
-    //void allocArr(int**& arr, int old_n, int new_n) {
-    //    deleteArr(arr, old_n); // delete the old
-
-    //    // allocate the new
-    //    arr = new int *[new_n]; 
-    //    for (int i = 0; i < new_n; i++) {
-    //        arr[i] = new int[new_n];
-    //    }
-    //}
 
 public:
     Matrix() {
@@ -170,7 +161,6 @@ public:
 
 void testMatrix()
 {
-
     Matrix a(3);
     a.setAllValue();
     a.show();

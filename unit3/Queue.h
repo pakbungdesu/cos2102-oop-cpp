@@ -77,7 +77,6 @@ public:
         for (i = 0; i < this->count; i++) {
             this->arr[i] = this->arr[i + 1];
         }
-        this->arr[i] = NULL;
     }
 
     bool isQueueFull() {
@@ -89,19 +88,19 @@ public:
         return this->count == 0;
     }
 
-    int remove() {
+    void remove() {
         if (!isQueueEmpty()) {
+            int res = this->arr[0];
+            shiftLeft();
+            this->count--;
+            cout << res << endl;
 
-            if (this->count - 1 <= this->len / 4) {
-                if (this->count <= this->len / 4) {
-                    resize(this->len / 2);
-                }
-                int res = this->arr[0];
-                this->count--;
-                shiftLeft();
-                return res;
+            if (this->count <= this->len / 4) {
+                resize(this->len / 2);
             }
-            return -9999; // no more items to return
+        }
+        else {
+            cout << "no more items to remove." << endl;
         }
     }
 
@@ -135,7 +134,7 @@ void testQueue()
 
     cout << "Dequeue" << endl;
     for (int i = 0; i < 9; i++) {
-        cout << q2.remove() << endl;
+        q2.remove();
     }
     cout << "Is queue full?: " << q2.isQueueFull() << endl;
     cout << "Current size of queue: " << q2.currentSize() << endl;

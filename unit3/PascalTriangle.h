@@ -22,6 +22,7 @@ private:
     void allocPascal(int newSize) {
         deletePascal();
         this->arr = new int* [newSize];
+
         for (int i = 0; i < newSize; i++) {
             this->arr[i] = new int[newSize];
         }
